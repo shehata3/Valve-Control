@@ -7,25 +7,25 @@ bool  logic2 = false;
 int   Ac = A2;
 bool  logic3 = false;
 
-int   valve4 = A3;
+int   Ba = A3;
 bool  logic4 = false;
 
-int   valve5 = A4;
+int   Bb = A4;
 bool  logic5 = false;
 
-int   valve6 = A5;
+int   Bc = A5;
 bool  logic6 = false;
 
-int   valve7 = 2;
+int   Turbo = 2;
 bool  logic7 = false;
 
-int   valve8 = 5;
+int   Turbo4 = 5;
 bool  logic8 = false;
 
-int valve9 = 7;
+int Rough = 7;
 bool logic9 = false;
 
-int valve10 = 10;
+int Laser = 10;
 bool logic10 = false;
 
 void setup() {
@@ -33,24 +33,24 @@ void setup() {
   pinMode(Aa, OUTPUT);      // Here we initialize the pins by telling the arduino that they will all be used as output.
   pinMode(Ab, OUTPUT);
   pinMode(Ac, OUTPUT);
-  pinMode(valve4, OUTPUT);
-  pinMode(valve5, OUTPUT);
-  pinMode(valve6, OUTPUT);
-  pinMode(valve7, OUTPUT);
-  pinMode(valve8, OUTPUT);
-  pinMode(valve9, OUTPUT);
-  pinMode(valve10, OUTPUT);
+  pinMode(Ba, OUTPUT);
+  pinMode(Bb, OUTPUT);
+  pinMode(Bc, OUTPUT);
+  pinMode(Turbo, OUTPUT);
+  pinMode(Turbo4, OUTPUT);
+  pinMode(Rough, OUTPUT);
+  pinMode(Laser, OUTPUT);
   
   digitalWrite(Aa, LOW);    // Here we initialize each pin to start at 0V as to ensure all valves start in the OFF state
   digitalWrite(Ab, LOW);
   digitalWrite(Ac, LOW);
-  digitalWrite(valve4, LOW);
-  digitalWrite(valve5, LOW);
-  digitalWrite(valve6, LOW);
-  digitalWrite(valve7, LOW);
-  digitalWrite(valve8, LOW);
-  digitalWrite(valve9, LOW);
-  digitalWrite(valve10, LOW);
+  digitalWrite(Ba, LOW);
+  digitalWrite(Bb, LOW);
+  digitalWrite(Bc, LOW);
+  digitalWrite(Turbo, LOW);
+  digitalWrite(Turbo4, LOW);
+  digitalWrite(Rough, LOW);
+  digitalWrite(Laser, LOW);
   
   Serial.begin(9600);           // This is the function to initialize serial communication with the computer, additional information on the importance of it can be
                                 //found in the documentation.
@@ -102,77 +102,77 @@ void loop() {
     else if (val == '4') {
       if (logic4 == false) {
         logic4 = true;
-        digitalWrite(valve4, HIGH);
+        digitalWrite(Ba, HIGH);
       }
       else {
         logic4 = false;
-        digitalWrite(valve4, LOW);
+        digitalWrite(Ba, LOW);
       }
     }
     
     else if (val == '5') {
       if (logic5 == false) {
         logic5 = true;
-        digitalWrite(valve5, HIGH);
+        digitalWrite(Bb, HIGH);
       }
       else {
         logic5 = false;
-        digitalWrite(valve5, LOW);
+        digitalWrite(Bb, LOW);
       }
     }
     
     else if (val == '6') {
       if (logic6 == false) {
         logic6 = true;
-        digitalWrite(valve6, HIGH);
+        digitalWrite(Bc, HIGH);
       }
       else {
         logic6 = false;
-        digitalWrite(valve6, LOW);
+        digitalWrite(Bc, LOW);
       }
     }
     
     else if (val == '7') {
       if (logic7 == false) {
         logic7 = true;
-        digitalWrite(valve7, HIGH);
+        digitalWrite(Turbo, HIGH);
       }
       else {
         logic7 = false;
-        digitalWrite(valve7, LOW);
+        digitalWrite(Turbo, LOW);
       }
     }
     
     else if (val == '8') {
       if (logic8 == false) {
         logic8 = true;
-        digitalWrite(valve8, HIGH);
+        digitalWrite(Turbo4, HIGH);
       }
       else {
         logic8 = false;
-        digitalWrite(valve8, LOW);
+        digitalWrite(Turbo4, LOW);
       }
     }
       
        else if (val == '9') {
         if (logic9 = false) {
           logic9 = true;
-          digitalWrite(valve9, HIGH);
+          digitalWrite(Rough, HIGH);
         }
         else {
           logic9 = false;
-          digitalWrite(valve9, LOW);
+          digitalWrite(Rough, LOW);
         }
       }
       
        else if (val == '0') {
         if (logic10 = false) {
           logic10 = true;
-          digitalWrite(valve10, HIGH);
+          digitalWrite(Laser, HIGH);
         }
         else {
           logic10 = false;
-          digitalWrite(valve10, LOW);
+          digitalWrite(Laser, LOW);
         }
       }
   }
