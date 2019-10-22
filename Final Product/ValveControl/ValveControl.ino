@@ -1,10 +1,10 @@
-int   valve1 = A0;      // This section sets variables to the pins attached to the valves. It also makes a "paired" logic value that holds the state of the respective
+int   Aa= A0;      // This section sets variables to the pins attached to the valves. It also makes a "paired" logic value that holds the state of the respective
 bool  logic1 = false;   //pin whether it may be off or on
 
-int   valve2 = A1;
+int   Ab = A1;
 bool  logic2 = false;
 
-int   valve3 = A2;
+int   Ac = A2;
 bool  logic3 = false;
 
 int   valve4 = A3;
@@ -30,9 +30,9 @@ bool logic10 = false;
 
 void setup() {
   // all code in the setup function will only be run once, when the arduino is first switched on
-  pinMode(valve1, OUTPUT);      // Here we initialize the pins by telling the arduino that they will all be used as output.
-  pinMode(valve2, OUTPUT);
-  pinMode(valve3, OUTPUT);
+  pinMode(Aa, OUTPUT);      // Here we initialize the pins by telling the arduino that they will all be used as output.
+  pinMode(Ab, OUTPUT);
+  pinMode(Ac, OUTPUT);
   pinMode(valve4, OUTPUT);
   pinMode(valve5, OUTPUT);
   pinMode(valve6, OUTPUT);
@@ -41,9 +41,9 @@ void setup() {
   pinMode(valve9, OUTPUT);
   pinMode(valve10, OUTPUT);
   
-  digitalWrite(valve1, LOW);    // Here we initialize each pin to start at 0V as to ensure all valves start in the OFF state
-  digitalWrite(valve2, LOW);
-  digitalWrite(valve3, LOW);
+  digitalWrite(Aa, LOW);    // Here we initialize each pin to start at 0V as to ensure all valves start in the OFF state
+  digitalWrite(Ab, LOW);
+  digitalWrite(Ac, LOW);
   digitalWrite(valve4, LOW);
   digitalWrite(valve5, LOW);
   digitalWrite(valve6, LOW);
@@ -66,11 +66,11 @@ void loop() {
     if (val == '1') {           // The following portion of the code checks which value was sent by the computer, in order to switch the state of the valve that corresponds
       if (logic1 == false) {    //with the button pressed on the GUI
         logic1 = true;
-        digitalWrite(valve1, HIGH);
+        digitalWrite(Aa, HIGH);
       }
       else {
         logic1 = false;
-        digitalWrite(valve1, LOW);
+        digitalWrite(Aa, LOW);
       }
     }
 
@@ -78,11 +78,11 @@ void loop() {
     else if (val == '2') {    //How it works is when the respective value is pressed, it checks the state of the pin (note that the valve and pin are always in the same state).
       if (logic2 == false) {  // This state is then switched, and the new state of the pin/valve is saved in the respective "logic" boolean
         logic2 = true;
-        digitalWrite(valve2, HIGH);
+        digitalWrite(Ab, HIGH);
       }
       else {
         logic2 = false;
-        digitalWrite(valve2, LOW);
+        digitalWrite(Ab, LOW);
       }
     }
 
@@ -90,11 +90,11 @@ void loop() {
      else if (val == '3') {
       if (logic3 == false) {
         logic3 = true;
-        digitalWrite(valve3, HIGH);
+        digitalWrite(Ac, HIGH);
       }
       else {
         logic3 = false;
-        digitalWrite(valve3, LOW);
+        digitalWrite(Ac, LOW);
       }
     }
 
@@ -152,7 +152,7 @@ void loop() {
         logic8 = false;
         digitalWrite(valve8, LOW);
       }
-      }
+    }
       
        else if (val == '9') {
         if (logic9 = false) {
@@ -177,4 +177,3 @@ void loop() {
       }
   }
 }
-
