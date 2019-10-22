@@ -153,27 +153,29 @@ void loop() {
         digitalWrite(Turbo4, LOW);
       }
     }
-      
-       else if (val == '9') {
-        if (logic9 = false) {
-          logic9 = true;
-          digitalWrite(Rough, HIGH);
-        }
-        else {
-          logic9 = false;
-          digitalWrite(Rough, LOW);
-        }
+
+
+    else if (val == '9') {
+      if (logic9 == false) {
+        logic9 = true;
+        digitalWrite(Rough, HIGH);
       }
-      
-       else if (val == '0') {
-        if (logic10 = false) {
-          logic10 = true;
-          digitalWrite(Laser, HIGH);
-        }
-        else {
-          logic10 = false;
-          digitalWrite(Laser, LOW);
-        }
+      else {
+        logic9 = false;
+        digitalWrite(Rough, LOW);
       }
+    }
+
+
+    else if (val == '0') {
+      if (logic10 == false) {
+        logic10 = true;
+        digitalWrite(Laser, HIGH);
+      }
+      else {
+        logic10 = false;
+        digitalWrite(Laser, LOW);
+      }
+    }
   }
 }
